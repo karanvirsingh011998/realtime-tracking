@@ -17,17 +17,13 @@ if (navigator.geolocation) {
     )
 }
 
-map = L.map("map").setView([0, 0], 10)
+map = L.map("map").setView([0, 0], 18)
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: 'Karanvir Singh'
 }).addTo(map);
 
-
-const markers = {
-
-
-}
+const markers = {}
 
 socket.on("receive-location", (data) => {
     console.log('data', data)
@@ -44,8 +40,8 @@ socket.on("receive-location", (data) => {
     }
 })
 
-socket.on('user-diconnect',()=>{
-    if(markers[id]){
+socket.on('user-diconnect', () => {
+    if (markers[id]) {
         map.removeLayer(markers[id])
         delete markers[id]
     }

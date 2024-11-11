@@ -15,7 +15,6 @@ io.on("connection", (socket)=>{
     socket.on('disconnect',()=>{
         io.emit('user-diconnect', socket.id)
     })
-    console.log('socket=======>>>>>>>')
 })
 //ejs
 app.set('view engine', "ejs")
