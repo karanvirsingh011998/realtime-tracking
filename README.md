@@ -8,3 +8,4 @@
 # If geolocation is not enabled the app will ask you to allow the location.
 
 # Link to Leaflet: https://leafletjs.com/
+![realtime-tracking](https://github.com/user-attachments/assets/e79f6b83-cc2e-4f28-8a5f-060b6fae226c)
